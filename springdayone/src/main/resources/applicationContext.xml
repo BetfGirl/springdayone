@@ -14,6 +14,8 @@
 
  <!-- 注解驱动 -->
     <mvc:annotation-driven/>
+    <!-- 处理静态资源 -->
+    <mvc:default-servlet-handler/>
     <!-- 处理器映射器 -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
     <!-- 处理器适配器 -->
@@ -33,6 +35,9 @@
     
 <!-- 扫描实现类的包 -->
     <context:component-scan base-package="controller"></context:component-scan>
-    
+	<context:component-scan base-package="service_Impl"></context:component-scan>
+	<context:component-scan base-package="dao"></context:component-scan>
+    <!-- 加载其他的配置 -->
+    <import resource="classpath:applicationContext-dao.xml"/>
 
 </beans>

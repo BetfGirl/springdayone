@@ -7,7 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-afaifla
-${a}
+
+<form action="Book/select" method="post">
+<input type="text" value="input">输入查询名称</input>
+
+<input name="input"  type="submit">
+
+</form>
 </body>
 </html>
